@@ -73,6 +73,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO)
 
     module = Module()
+    module.setup()
 
     logging.getLogger('ZigMqtt2Mqtt').addHandler(MQTTHandler(module.getMqttClient(), '/house/agents/ZigMqtt2Mqtt/log'))
 
